@@ -1,0 +1,25 @@
+name: AutoSorter
+version: '1.0.0'
+main: net.oxisi.autosorter.AutoSorter
+api-version: '1.19'
+prefix: IS
+authors: [oxisi]
+description: Inventory sorter
+website: nope
+
+commands:
+  sortinv:
+    description: Sorts your inventory
+  openint:
+    description: Opens someones inventory
+  clonebody:
+    description: clones your body
+    permission: autosorter.clone
+  sandcastle:
+    description: builds a sand castle
+    permission: autosorter.sandcastle
+  actionbar:
+    description: Announces a text to players actionbar
+    permission: autosorter.sandcastle
+  ranktime:
+    description: Shows How
