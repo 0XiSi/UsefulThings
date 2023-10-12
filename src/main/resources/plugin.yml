@@ -23,3 +23,6 @@ commands:
     permission: autosorter.sandcastle
   ranktime:
     description: Shows How
+  sc:
+    description: Sends a message in the staff chat.
+    usage: /st <message>

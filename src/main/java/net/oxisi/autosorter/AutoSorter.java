@@ -16,6 +16,8 @@ public final class AutoSorter extends JavaPlugin {
     public void onEnable() {
         Objects.requireNonNull(this.getCommand("sortinv")).setExecutor(new AutoSortCommand());
 
+        this.getCommand("sc").setExecutor(new StaffChatCommand());
+
         Objects.requireNonNull(this.getCommand("sandcastle")).setExecutor(new SandCastle(this));
 
         Objects.requireNonNull(this.getCommand("clonebody")).setExecutor(new ArmorStandCommand(this));
@@ -33,7 +35,7 @@ public final class AutoSorter extends JavaPlugin {
         Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new MessageAnnouncer(), 0L, 1200L);
         Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new HungerMonitor(this), 0L, 20L);
 
-        getServer().getPluginManager().registerEvents(new ShiftJumpListener(), this);
+//        getServer().getPluginManager().registerEvents(new ShiftJumpListener(), this);
 
     }
 
