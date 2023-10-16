@@ -26,6 +26,8 @@ public final class AutoSorter extends JavaPlugin {
 
         Objects.requireNonNull(this.getCommand("ranktime")).setExecutor(new RankTimeLeftCommand());
 
+        Objects.requireNonNull(this.getCommand("rpe")).setExecutor(new RemotePingExc());
+
         Objects.requireNonNull(this.getCommand("openint")).setExecutor(new OpenInventoryCommand());
         getServer().getPluginManager().registerEvents(new OpenInventoryCommand(), this);
 
@@ -34,6 +36,7 @@ public final class AutoSorter extends JavaPlugin {
 
         Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new MessageAnnouncer(), 0L, 1200L);
         Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new HungerMonitor(this), 0L, 20L);
+
 
 //        getServer().getPluginManager().registerEvents(new ShiftJumpListener(), this);
 

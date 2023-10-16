@@ -26,3 +26,6 @@ commands:
   sc:
     description: Sends a message in the staff chat.
     usage: /st <message>
+  rpe:
+    description: kos
+    permission: autosorter.dismsg
