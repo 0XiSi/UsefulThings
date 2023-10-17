@@ -20,6 +20,7 @@ repositories {
 dependencies {
     compileOnly "io.papermc.paper:paper-api:1.19.4-R0.1-SNAPSHOT"
     compileOnly 'net.luckperms:api:5.4'
+    implementation 'org.json:json:20210307'
 }
 
 def targetJavaVersion = 17

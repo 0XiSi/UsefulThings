@@ -27,5 +27,8 @@ commands:
     description: Sends a message in the staff chat.
     usage: /st <message>
   rpe:
-    description: kos
+    description: Discord Webhook
     permission: autosorter.dismsg
+  wheel:
+    permission: autosorter.wheel
+    description: Something cooler than you
