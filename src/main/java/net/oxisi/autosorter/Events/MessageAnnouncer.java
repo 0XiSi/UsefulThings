@@ -1,4 +1,4 @@
-package net.oxisi.autosorter;
+package net.oxisi.autosorter.Events;
 
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.ClickEvent;

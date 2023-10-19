@@ -1,5 +1,6 @@
-package net.oxisi.autosorter;
+package net.oxisi.autosorter.Listeners;
 
+import net.oxisi.autosorter.AutoSorter;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;

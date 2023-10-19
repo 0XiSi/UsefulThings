@@ -1,4 +1,4 @@
-package net.oxisi.autosorter;
+package net.oxisi.autosorter.Listeners;
 
 import org.bukkit.*;
 import org.bukkit.block.Block;

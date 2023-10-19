@@ -1,4 +1,4 @@
-package net.oxisi.autosorter;
+package net.oxisi.autosorter.Commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
