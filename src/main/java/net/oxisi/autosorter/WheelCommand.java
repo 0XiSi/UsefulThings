@@ -29,7 +29,6 @@ public class WheelCommand implements CommandExecutor, Listener {
     static ArmorStand startButton;
     private final List<ArmorStand> rotatingArmorStands = new ArrayList<>();
     private boolean isSpinning = false;
-    private double centerX, centerZ;
     private final double rotationSpeed = 0.05;
 
     public static ItemStack leatherHelmet;
@@ -67,7 +66,7 @@ public class WheelCommand implements CommandExecutor, Listener {
 
         startButton.setCustomName("InteractToRemove");
 
-        colorArmor(Material.LEATHER_HELMET, Color.GREEN);
+        colorArmor(Material.LEATHER_HELMET, Color.LIME);
 
         startButton.getEquipment().setHelmet(leatherHelmet);
         startButton.setVisible(false);
@@ -75,8 +74,8 @@ public class WheelCommand implements CommandExecutor, Listener {
         startButton.setGravity(false);
 
         // Set the center point for rotation
-        centerX = x + 0.5;
-        centerZ = z+ 0.5;
+        double centerX = x + 0.5;
+        double centerZ = z + 0.5;
 
         return true;
     }
@@ -86,6 +85,8 @@ public class WheelCommand implements CommandExecutor, Listener {
         ArmorStand armorStand = event.getRightClicked();
         Bukkit.getLogger().info(armorStand.getCustomName());
         if ("InteractToRemove".equals(armorStand.getCustomName())) {
+            colorArmor(Material.LEATHER_HELMET, Color.RED);
+            startButton.getEquipment().setHelmet(leatherHelmet);
             Bukkit.getLogger().info("E");
             if (!isSpinning) {
                 Bukkit.getLogger().info("R");
@@ -134,7 +135,7 @@ public class WheelCommand implements CommandExecutor, Listener {
         }
 
         // Define a duration (in ticks) for how long the rotation should continue
-        int rotationDuration = 200; // Adjust as needed
+        int rotationDuration = 160; // Adjust as needed
 
         new BukkitRunnable() {
             double angle = 0;
@@ -152,6 +153,7 @@ public class WheelCommand implements CommandExecutor, Listener {
                     }
                     rotatingArmorStands.clear();
 
+                    startButton.remove();
                     // Drop an enchanted golden apple
                     Location dropLocation = startButton.getLocation().add(0, 2, 0); // Adjust the height as needed
                     ItemStack enchantedGoldenApple = new ItemStack(Material.ENCHANTED_GOLDEN_APPLE);
@@ -160,8 +162,7 @@ public class WheelCommand implements CommandExecutor, Listener {
                     double x = startButton.getLocation().getX();
                     double y = startButton.getLocation().getY();
                     double z = startButton.getLocation().getZ();
-                    Location particleLocation = new Location(world, x, y, z);
-                    world.spawnParticle(Particle.TOTEM, dropLocation, 10);
+                    world.spawnParticle(Particle.TOTEM, dropLocation, 255);
 
                     player.getWorld().dropItem(dropLocation, enchantedGoldenApple);
 
@@ -202,11 +203,10 @@ public class WheelCommand implements CommandExecutor, Listener {
         }
         rotatingArmorStands.clear();
     }
-    public final ItemStack colorArmor(Material armor, Color color){
+    public final void colorArmor(Material armor, Color color){
         leatherHelmet = new ItemStack(armor);
         LeatherArmorMeta meta = (LeatherArmorMeta) leatherHelmet.getItemMeta();
         meta.setColor(color);
         leatherHelmet.setItemMeta(meta);
-        return leatherHelmet;
     }
 }
