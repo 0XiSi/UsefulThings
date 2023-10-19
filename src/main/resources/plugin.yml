@@ -32,3 +32,6 @@ commands:
   wheel:
     permission: autosorter.wheel
     description: Something cooler than you
+  displayentity:
+    aliases: [de]
+    permission: autosorter.command.displayentity

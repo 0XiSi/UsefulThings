@@ -1,6 +1,7 @@
 package net.oxisi.autosorter;
 
 import org.bukkit.Bukkit;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
@@ -12,11 +13,14 @@ public final class AutoSorter extends JavaPlugin {
 
     public HashMap<UUID, Long> rankStartTime = new HashMap<>();
     public HashMap<UUID, Integer> rankDuration = new HashMap<>();
+
+
     @Override
     public void onEnable() {
         Objects.requireNonNull(this.getCommand("sortinv")).setExecutor(new AutoSortCommand());
+        getCommand("sc").setExecutor(new StaffChatCommand());
 
-        this.getCommand("sc").setExecutor(new StaffChatCommand());
+        getCommand("displayentity").setExecutor(new DisplayEntityCommand());
 
         Objects.requireNonNull(this.getCommand("sandcastle")).setExecutor(new SandCastle(this));
 
