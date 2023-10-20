@@ -2,10 +2,12 @@ package net.oxisi.autosorter;
 
 import net.oxisi.autosorter.Commands.*;
 import net.oxisi.autosorter.Events.MessageAnnouncer;
+import net.oxisi.autosorter.Events.PlayerJoinCountdown;
 import net.oxisi.autosorter.Listeners.BlockBreakListener;
 import net.oxisi.autosorter.Listeners.EntityDeathListener;
 import net.oxisi.autosorter.Listeners.HungerMonitor;
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
@@ -43,6 +45,8 @@ public final class AutoSorter extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new EntityDeathListener(this), this);
         getServer().getPluginManager().registerEvents(new BlockBreakListener(), this);
+
+        getServer().getPluginManager().registerEvents(new PlayerJoinCountdown(this), this);
 
         getServer().getPluginManager().registerEvents(new WheelCommand(this), this);
 
