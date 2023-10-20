@@ -1,2 +1,2 @@
-# The Good Plugin
+# UsefulThings
 kobs
