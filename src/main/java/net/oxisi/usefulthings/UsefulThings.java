@@ -1,20 +1,19 @@
-package net.oxisi.autosorter;
+package net.oxisi.usefulthings;
 
-import net.oxisi.autosorter.Commands.*;
-import net.oxisi.autosorter.Events.MessageAnnouncer;
-import net.oxisi.autosorter.Events.PlayerJoinCountdown;
-import net.oxisi.autosorter.Listeners.BlockBreakListener;
-import net.oxisi.autosorter.Listeners.EntityDeathListener;
-import net.oxisi.autosorter.Listeners.HungerMonitor;
+import net.oxisi.usefulthings.Commands.*;
+import net.oxisi.usefulthings.Events.MessageAnnouncer;
+import net.oxisi.usefulthings.Events.PlayerJoinCountdown;
+import net.oxisi.usefulthings.Listeners.BlockBreakListener;
+import net.oxisi.usefulthings.Listeners.EntityDeathListener;
+import net.oxisi.usefulthings.Listeners.HungerMonitor;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
 import java.util.Objects;
 import java.util.UUID;
 
-public final class AutoSorter extends JavaPlugin {
+public final class UsefulThings extends JavaPlugin {
     public static boolean isDirectionalBreakEnabled = false;
 
     public HashMap<UUID, Long> rankStartTime = new HashMap<>();
@@ -40,7 +39,7 @@ public final class AutoSorter extends JavaPlugin {
 
         Objects.requireNonNull(this.getCommand("rpe")).setExecutor(new RemotePingExc());
 
-        Objects.requireNonNull(this.getCommand("openint")).setExecutor(new OpenInventoryCommand());
+        Objects.requireNonNull(this.getCommand("openinv")).setExecutor(new OpenInventoryCommand());
         getServer().getPluginManager().registerEvents(new OpenInventoryCommand(), this);
 
         getServer().getPluginManager().registerEvents(new EntityDeathListener(this), this);

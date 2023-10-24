@@ -1,4 +1,4 @@
-package net.oxisi.autosorter.Listeners;
+package net.oxisi.usefulthings.Listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;

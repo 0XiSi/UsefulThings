@@ -1,4 +1,4 @@
-package net.oxisi.autosorter.Events;
+package net.oxisi.usefulthings.Events;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.title.Title;

@@ -1,6 +1,6 @@
-package net.oxisi.autosorter.Listeners;
+package net.oxisi.usefulthings.Listeners;
 
-import net.oxisi.autosorter.AutoSorter;
+import net.oxisi.usefulthings.UsefulThings;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
@@ -15,9 +15,9 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 public class EntityDeathListener implements Listener {
 
-    private final AutoSorter plugin;
+    private final UsefulThings plugin;
 
-    public EntityDeathListener(AutoSorter plugin) {
+    public EntityDeathListener(UsefulThings plugin) {
         this.plugin = plugin;
     }
 

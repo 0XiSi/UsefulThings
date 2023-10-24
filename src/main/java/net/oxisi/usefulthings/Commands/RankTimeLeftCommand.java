@@ -1,4 +1,4 @@
-package net.oxisi.autosorter.Commands;
+package net.oxisi.usefulthings.Commands;
 
 import net.luckperms.api.LuckPerms;
 import net.luckperms.api.LuckPermsProvider;

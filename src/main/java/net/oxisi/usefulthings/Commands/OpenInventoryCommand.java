@@ -1,4 +1,4 @@
-package net.oxisi.autosorter.Commands;
+package net.oxisi.usefulthings.Commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -23,7 +23,7 @@ public class OpenInventoryCommand implements CommandExecutor, Listener {
             return false;
         }
 
-        if (!player.hasPermission("autosorter.openinv")) {
+        if (!player.hasPermission("usefulthings.openinv")) {
             player.sendMessage(ChatColor.RED + "You do not have permission to use this command.");
             return true;
         }

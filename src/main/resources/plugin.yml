@@ -1,6 +1,6 @@
-name: AutoSorter
+name: UsefulThings
 version: '1.0.0'
-main: net.oxisi.autosorter.AutoSorter
+main: net.oxisi.usefulthings.UsefulThings
 api-version: '1.19'
 prefix: IS
 authors: [oxisi]
@@ -10,28 +10,33 @@ website: nope
 commands:
   sortinv:
     description: Sorts your inventory
-  openint:
+    permission: usefulthings.sortinv
+  openinv:
     description: Opens someones inventory
+    permission: usefulthings.openinv
   clonebody:
     description: clones your body
-    permission: autosorter.clone
+    permission: usefulthings.clonebody
   sandcastle:
     description: builds a sand castle
-    permission: autosorter.sandcastle
+    permission: usefulthings.sandcastle
   actionbar:
+    aliases: [ab]
     description: Announces a text to players actionbar
-    permission: autosorter.sandcastle
+    permission: usefulthings.actionbar
   ranktime:
-    description: Shows How
+    description: Shows How much of your rank left
+    permission: usefulthings.ranktime
   sc:
     description: Sends a message in the staff chat.
     usage: /st <message>
+    permission: usefulthings.staffchat
   rpe:
     description: Discord Webhook
-    permission: autosorter.dismsg
+    permission: usefulthings.dismsg
   wheel:
-    permission: autosorter.wheel
+    permission: usefulthings.wheel
     description: Something cooler than you
   displayentity:
     aliases: [de]
-    permission: autosorter.command.displayentity
+    permission: usefulthings.displayentity

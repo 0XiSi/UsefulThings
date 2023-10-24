@@ -1,4 +1,4 @@
-package net.oxisi.autosorter.Commands;
+package net.oxisi.usefulthings.Commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -29,7 +29,7 @@ public class StaffChatCommand implements CommandExecutor {
 
         // Send it to all online players with the right permission
         Bukkit.getOnlinePlayers().stream()
-                .filter(p -> p.hasPermission("autosorter.sc"))
+                .filter(p -> p.hasPermission("usefulthings.sc"))
                 .forEach(p -> p.sendMessage(formattedMessage));
 
         return true;
