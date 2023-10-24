@@ -11,32 +11,37 @@ commands:
   sortinv:
     description: Sorts your inventory
     permission: usefulthings.sortinv
+    usage: /sortinv
   openinv:
     description: Opens someones inventory
     permission: usefulthings.openinv
+    usage: /openinv <player>
   clonebody:
     description: clones your body
     permission: usefulthings.clonebody
+    usage: /clonebody
   sandcastle:
     description: builds a sand castle
     permission: usefulthings.sandcastle
+    usage: sandcastle
   actionbar:
     aliases: [ab]
     description: Announces a text to players actionbar
     permission: usefulthings.actionbar
+    usage: /actionbar <text>
   ranktime:
-    description: Shows How much of your rank left
+    description: Shows How much of your rank left from luckperms
     permission: usefulthings.ranktime
+    usage: /ranktime
   sc:
     description: Sends a message in the staff chat.
     usage: /st <message>
     permission: usefulthings.staffchat
-  rpe:
-    description: Discord Webhook
-    permission: usefulthings.dismsg
   wheel:
     permission: usefulthings.wheel
-    description: Something cooler than you
+    description: Something cooler than you. you just have to try it
   displayentity:
     aliases: [de]
+    description: Spawns an entity of type Block, Item, Text
     permission: usefulthings.displayentity
+    usage: /de <type> [text]

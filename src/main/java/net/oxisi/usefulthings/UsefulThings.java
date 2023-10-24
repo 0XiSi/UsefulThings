@@ -37,8 +37,6 @@ public final class UsefulThings extends JavaPlugin {
 
         Objects.requireNonNull(this.getCommand("wheel")).setExecutor(new WheelCommand(this));
 
-        Objects.requireNonNull(this.getCommand("rpe")).setExecutor(new RemotePingExc());
-
         Objects.requireNonNull(this.getCommand("openinv")).setExecutor(new OpenInventoryCommand());
         getServer().getPluginManager().registerEvents(new OpenInventoryCommand(), this);
 
